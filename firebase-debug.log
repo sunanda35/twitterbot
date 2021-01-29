@@ -1,0 +1,55 @@
+[debug] [2021-01-29T16:41:14.988Z] ----------------------------------------------------------------------
+[debug] [2021-01-29T16:41:14.991Z] Command:       /usr/bin/node /usr/local/bin/firebase init
+[debug] [2021-01-29T16:41:14.992Z] CLI Version:   9.2.2
+[debug] [2021-01-29T16:41:14.992Z] Platform:      linux
+[debug] [2021-01-29T16:41:14.992Z] Node Version:  v10.19.0
+[debug] [2021-01-29T16:41:14.992Z] Time:          Fri Jan 29 2021 22:11:14 GMT+0530 (India Standard Time)
+[debug] [2021-01-29T16:41:14.992Z] ----------------------------------------------------------------------
+[debug] [2021-01-29T16:41:14.992Z] 
+[debug] [2021-01-29T16:41:14.998Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-01-29T16:41:14.998Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/sunanda/Desktop/Github/twitterbot
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2021-01-29T16:41:24.345Z] > refreshing access token with scopes: []
+[debug] [2021-01-29T16:41:24.346Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-01-29T16:41:29.866Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","date":"Fri, 29 Jan 2021 16:41:29 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-01-29T16:41:29.882Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2021-01-29T16:41:30.713Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2021-01-29T16:41:30.713Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Using project twitbot-41d42 (twitbot) 
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2021-01-29T16:41:58.079Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/releases.json [none]
+[debug] [2021-01-29T16:41:58.337Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/releases.json 200
+[debug] [2021-01-29T16:41:58.337Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/releases.json {"current":{"version":"8.2.4","browserURL":"https://www.gstatic.com/firebasejs/8.2.4/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/8.2.4/firebase.tgz"},"live":{"version":"8.2","browserURL":"https://www.gstatic.com/firebasejs/live/8.2/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/live/8.2/firebase.tgz"},"components":{"analytics":"https://www.gstatic.com/firebasejs/8.2.4/firebase-analytics.js","app":"https://www.gstatic.com/firebasejs/8.2.4/firebase-app.js","auth":"https://www.gstatic.com/firebasejs/8.2.4/firebase-auth.js","database":"https://www.gstatic.com/firebasejs/8.2.4/firebase-database.js","firestore":"https://www.gstatic.com/firebasejs/8.2.4/firebase-firestore.js","functions":"https://www.gstatic.com/firebasejs/8.2.4/firebase-functions.js","installations":"https://www.gstatic.com/firebasejs/8.2.4/firebase-installations.js","messaging":"https://www.gstatic.com/firebasejs/8.2.4/firebase-messaging.js","storage":"https://www.gstatic.com/firebasejs/8.2.4/firebase-storage.js","performance":"https://www.gstatic.com/firebasejs/8.2.4/firebase-performance.js","remote-config":"https://www.gstatic.com/firebasejs/8.2.4/firebase-remote-config.js","firestore.memory":"https://www.gstatic.com/firebasejs/8.2.4/firebase-firestore.memory.js"}}
+[debug] [2021-01-29T16:41:58.632Z] Error: ENOTDIR: not a directory, open '/home/sunanda/Desktop/Github/twitterbot/index.js/index.html'
+    at Object.openSync (fs.js:443:3)
+    at Object.writeFileSync (fs.js:1194:35)
+    at Object.createFileSync (/usr/local/lib/node_modules/firebase-tools/node_modules/fs-extra/lib/ensure/file.js:34:6)
+    at Config.writeProjectFile (/usr/local/lib/node_modules/firebase-tools/lib/config.js:155:8)
+    at /usr/local/lib/node_modules/firebase-tools/lib/config.js:174:18
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+[error] 
+[error] Error: An unexpected error has occurred.

@@ -1,6 +1,8 @@
 require("dotenv").config();
 const Twit = require('twit');
 
+function retweet(){
+
 const T = new Twit({
   consumer_key: process.env.APPLICATION_CONSUMER_KEY_HERE,
   consumer_secret: process.env.APPLICATION_CONSUMER_SECRET_HERE,
@@ -9,11 +11,12 @@ const T = new Twit({
 });
 
 // start stream and track tweets
-const stream = T.stream('statuses/filter', {track: '#ai'});
+const stream = T.stream('statuses/filter', {track: ['#ai','#javascript','#python', '#programming','#code'], language: 'en'});
 
 // use this to log errors from requests
 function responseCallback (err, data, response) {
     console.log(err);
+    
    }
 
 // event handler
@@ -23,3 +26,5 @@ stream.on('tweet', tweet => {
 T.post('statuses/retweet/:id', {id: tweet.id_str}, responseCallback);
 T.post('favorites/create', {id: tweet.id_str}, responseCallback);
 });
+}
+setInterval(retweet, 10000);
