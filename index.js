@@ -1,30 +1,24 @@
-require("dotenv").config();
-const Twit = require('twit');
+const schedule = require('node-schedule');
+const twit = require('./twitthis');
 
-function retweet(){
+const time = new Date('2021-01-31T20:03:26.000+5:30');
 
-const T = new Twit({
-  consumer_key: process.env.APPLICATION_CONSUMER_KEY_HERE,
-  consumer_secret: process.env.APPLICATION_CONSUMER_SECRET_HERE,
-  access_token: process.env.ACCESS_TOKEN_HERE,
-  access_token_secret: process.env.ACCESS_TOKEN_SECRET_HERE
-});
+//shedule work
+// schedule.scheduleJob(time, ()=>{
+//   console.log('job start running' )
+// })
 
-// start stream and track tweets
-const stream = T.stream('statuses/filter', {track: ['#ai','#javascript','#python', '#programming','#code'], language: 'en'});
+//time interval
+twit();
 
-// use this to log errors from requests
-function responseCallback (err, data, response) {
-    console.log(err);
+// const twohrs = '0 */2 * * *'
+// const twosec = '*/2 * * * * *'
+// const twittime = schedule.scheduleJob('*/10 * * * * *', ()=>{
+//   schedule.scheduleJob(twosec, ()=>{
+//     console.log('df')
     
-   }
-
-// event handler
-stream.on('tweet', tweet => {
-// perform some action here
-
-T.post('statuses/retweet/:id', {id: tweet.id_str}, responseCallback);
-T.post('favorites/create', {id: tweet.id_str}, responseCallback);
-});
-}
-setInterval(retweet, 10000);
+//     twittime.cancel()
+//   })
+  
+//   console.log('wait')
+// })
