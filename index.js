@@ -1,7 +1,8 @@
-const schedule = require('node-schedule');
-const twit = require('./twitthis');
+const schedule = require("node-schedule");
+const twit = require("./twitthis");
 
-twit();
+const isForSunanda = false; //if Sunanda: TRUE or FALSE
 
+twit(isForSunanda);
 
-// Just Use it. 
+// Just Use it.
